@@ -11,8 +11,7 @@ namespace Challenge3_OOP
         public string FullName;
         public double Mass;
         public double Height;
-        public double BMIJohn;
-        public double BMIMark;
+        
 
 
         public BMI(string FullName, double Mass, double Height)
@@ -23,44 +22,53 @@ namespace Challenge3_OOP
 
         }
 
-        public string CalculateBMIJohn()
+        public double CalculateBMI()
         {
-            double BMIJohn = Mass / (Math.Pow(Height, 2));
-            return $"John :Your BMI is: {BMIJohn}";
+            double BMICal = Mass / (Math.Pow(Height, 2));
+            return BMICal;
         }
 
-        public string CalculateBMIMark()
+        public  static void  BMICom(double A, double B)
         {
-            double BMIMark = Mass / (Math.Pow(Height, 2));
-            return $"Mark :Your BMI is: {BMIMark}";
-        }
-
-        public string BMICom()
-        {
-            if (BMIMark > BMIJohn)
+            if (A > B)
             {
-
-                return $"Mark has higher BMI than John";
-
+                Console.WriteLine("John BMI is higher than Mark BMI");
             }
-            else if (BMIMark < BMIJohn)
+            else if (A < B)
             {
-                return $"John has higher BMI than Mark";
+                Console.WriteLine("Mark BMI is higher than John BMI");
             }
-
-            else if (BMIMark == BMIJohn)
+            else if (A == B)
             {
-                return $"John and Mark have the same BMI";
+                Console.WriteLine("Mark BMI is the same as John BMI");
             }
-
             else
             {
-                return "Error";
+                Console.WriteLine("Error");
             }
-
-
-
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 

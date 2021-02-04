@@ -10,8 +10,8 @@ namespace Challenge3_OOP
     {
         static void Main(string[] args)
         {
-            BMI  Mark = new BMI("Mark Kristofer", 152, 95);
-            BMI  John = new BMI("John Robert", 192, 50);
+            BMI  Mark = new BMI("Mark Kristofer", 152, 105);
+            BMI  John = new BMI("John Robert", 192, 75);
 
             Console.WriteLine(John.FullName);
             Console.WriteLine(John.Mass);
@@ -24,11 +24,12 @@ namespace Challenge3_OOP
 
             Console.WriteLine("****************************************************");
 
-
-            Console.WriteLine(John.CalculateBMIJohn());
-            Console.WriteLine(Mark.CalculateBMIMark());
-            Console.WriteLine(John.BMICom());
-            Console.WriteLine(Mark.BMICom());
+           
+           double A= John.CalculateBMI();
+            double B = Mark.CalculateBMI();
+            Console.WriteLine(A);
+            Console.WriteLine(B);
+            BMI.BMICom(A, B);
 
 
             
